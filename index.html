@@ -9,6 +9,11 @@
 		<script type="text/javascript" src="https://unpkg.com/jsnes/dist/jsnes.min.js"></script>
 		<script type="text/javascript" src="nes-embed.js"></script>
 		<script>window.onload = function(){nes_load_url("nes-canvas", "insert.nes");}</script>
+		<script> // So it can escape certain filters, like GoGuardian
+        window.onbeforeunload = function() {
+            return "Are you sure you want to reload?";
+        };
+    </script>
 	</head>
 	<body>
 		<div style="margin: auto; width: 49%;">
